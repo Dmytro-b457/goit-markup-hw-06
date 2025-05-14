@@ -69,13 +69,13 @@ input {
 
 .header {
   background-color: #fcfcff;
-  padding: 24px;
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
   display: flex;
+  align-items: center;
 }
 
 .nav-header {
@@ -96,6 +96,13 @@ input {
   margin-right: 76px;
 }
 
+@media screen and (max-width: 768px) {
+  .logo-header {
+    padding: 16px;
+    display: block;
+  }
+}
+
 .logo-header-span {
   color: #2e2f42;
 }
@@ -111,6 +118,7 @@ input {
   color: #2e2f42;
   text-decoration: none;
   padding: 24px 0;
+  display: block;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .current {
@@ -158,6 +166,12 @@ input {
   color: #434455;
   white-space: nowrap;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .email-and-tel {
+    font-size: 12px;
+  }
 }
 
 .email-and-tel:hover,
@@ -238,6 +252,10 @@ input {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.menu-stud {
+  color: #404bbf;
+}
+
 .address-menu {
   font-style: normal;
   display: block;
@@ -246,6 +264,9 @@ input {
 
 .address-list-menu {
   gap: 12px;
+}
+.number {
+  color: #4d5ae5 !important;
 }
 
 .address-link-menu {
@@ -312,21 +333,48 @@ input {
   text-align: center;
 }
 
-@media screen and (min-width: 1024px) {
-  .section-one {
-    padding: 188px 0;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .section-one {
     padding: 72px 0;
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/people_mob.jpg);
+  }
+
+  @media (min-resolution: 2x) {
+    .section-one {
+      background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/people_mob_x2.jpg);
+    }
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .section-one {
     padding: 112px 0;
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/people_tab.jpg);
+  }
+
+  @media (min-resolution: 2x) {
+    .section-one {
+      background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/people_tab_x2.jpg);
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section-one {
+    padding: 188px 0;
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/people-office.jpg);
+  }
+
+  @media (min-resolution: 2x) {
+    .section-one {
+      background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/people_des_x2.jpg);
+    }
   }
 }
 
@@ -345,12 +393,8 @@ input {
     font-size: 36px;
     line-height: 1.11111;
     margin: 0;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .section-one {
-    padding: 112px auto;
+    padding-bottom: 72px;
+    max-width: 212px;
   }
 }
 
@@ -578,7 +622,6 @@ input {
     display: block;
     padding: 0 12px;
   }
-  /* падінг тут треба бо відстань від краю до контенту 28пх тільки в цій секції // у всіх інших 16пх і це прописано в контейнері  */
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -586,6 +629,7 @@ input {
     display: flex;
     flex-wrap: wrap;
     gap: 64px 24px;
+    justify-content: center;
   }
 }
 
@@ -605,7 +649,7 @@ input {
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .our-team-item {
-    flex: 1 1 calc(50% - 12px);
+    width: 264px;
   }
 }
 
@@ -959,6 +1003,8 @@ input {
 @media screen and (max-width: 767px) {
   .footer-subscribe {
     margin: 72px 0 16px 0;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -1294,5 +1340,15 @@ input[id='user-privacy']:checked + .modal-label .modal-label-span {
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 4px;
+  margin: 0 auto;
+}
+
+.section-main {
+  background-color: #2e2f42;
+  padding: 72px 52px;
+  max-width: 320px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   margin: 0 auto;
 }
